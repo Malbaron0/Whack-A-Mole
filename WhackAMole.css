@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  background: #ffc600;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{
+  background: #ffc600;
+    
+}
+
+.header {
+    text-align: center;
+    font-size: 60px;
+    font-family: Helvetica;
+}
+
+.game{
+    flex-wrap: wrap;
+    width: 900px;
+    height: 600px;
+    position: absolute;
+}
+
+.hole{
+    margin: 100px 20px 0 50px;
+    background: url(dirt.svg) center no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 300px;
+    position: relative;
+    z-index: 100;
+    
+}
+
+.mole{
+    margin: 100px 20px 0 50px;    
+    background: url(mole.svg) center no-repeat;
+    background-size: 60%;
+    width: 200px;
+    height:180px;
+    position: absolute;
+    bottom: 30%;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+    
+}
+
+.up{
+    height: 180px;
+    -webkit-transition: all 0.3s;
+       -moz-transition: all 0.3s;
+        -ms-transition: all 0.3s;
+         -o-transition: all 0.3s;
+            transition: all 0.3s;
+
+}
