@@ -1,18 +1,17 @@
 let holes = document.querySelectorAll(".hole");
-let show = document.querySelector(".testingBtn");
+let show = document.querySelector(".startGame");
 let moles = document.querySelectorAll(".mole");
+let Score = document.querySelector(".score");
 let lastHole;
 let randomMole;
 let endGame;
-
+let ScoreCounter;
 
 show.addEventListener("click", function () {
     startGame();
 }, false);
+
 addClickEvents();
-document.querySelector(".showBtn").addEventListener("click", function () {
-    moles[1].addEventListener('click', bonk);
-}, false);
 
 function randomTime(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -21,7 +20,7 @@ function randomTime(min, max) {
 
 function peek() {
 
-    const time = randomTime(500, 2000)
+    const time = randomTime(500, 1000)
     randomMole = getRandomHole().nextElementSibling; //query the returned node, and get the child element with class "mole"
     randomMole.classList.add("up");
     console.log(randomMole);
@@ -50,16 +49,20 @@ function getRandomHole() {
 }
 
 function startGame() {
+    ScoreCounter = 0;
+    Score.innerHTML = 0;
     endGame = false;
     peek(); //show the moles
     //after 10 seconds, set endGame to true, while will stop exit the setTimeOut in peek function
     setTimeout(function () {
         endGame = true;
-    }, 10000);
+        ScoreCounter = 0;
+    }, 15000);
 }
 
-function bonk(e) {
-    console.log("I was clicked");
+function hit(e) {
+    ScoreCounter++;
+    Score.innerHTML = ScoreCounter;
 }
 
 function addClickEvents() {
@@ -68,10 +71,7 @@ function addClickEvents() {
         var self = moles[i];
         console.log(self);
         self.addEventListener('click', function (event) {
-
-            // call your awesome function here
-            bonk(); // 'this' refers to the current button on for loop
-
+            hit();
         }, false);
 
     }

@@ -8,42 +8,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
     crossorigin="anonymous">
+  <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="WhackAMole.css">
 </head>
 
 <body>
-  <h1 class="header"> WHACK-A-MOLE!! </h1>
+  
   <div class="container">
+
     <div class="row">
-      <div class="col-xs-6 col-md-4">
+        <div class="col-xs-12 col-md-12" align="center">
+          <h1 class="header"> 15 Sec Whack-A-Mole!  <span class="score">0</span></h1>
+          <button class="startGame btn btn-default">Start Game</button>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4 col-md-4">
         <div class="hole hole1"></div>
         <div class="mole"></div>
       </div>
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-4">
         <div class="hole hole2">
         </div>
           <div class="mole"></div>
       </div>
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-4">
         <div class="hole hole3"></div>
           <div class="mole"></div>
         
       </div>
     </div>
 
-    <div class="row">
-      <div class="col-xs-6 col-md-4">
+    <div class="row secondRow">
+      <div class="col-xs-4 col-md-4">
         <div class="hole hole4"></div>
           <div class="mole"></div>
-        
       </div>
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-4">
         <div class="hole hole5"></div>
           <div class="mole"></div>
         
       </div>
 
-      <div class="col-xs-6 col-md-4">
+      <div class="col-xs-4 col-md-4">
         <div class="hole hole6"></div>
           <div class="mole"></div>
         
@@ -51,8 +59,6 @@
     </div>
   </div>
 
-  <button class="testingBtn">Show</button>
-  <button class="showBtn">Hide</button>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
     crossorigin="anonymous"></script>

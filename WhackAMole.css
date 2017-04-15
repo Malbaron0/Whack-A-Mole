@@ -10,41 +10,46 @@ html {
 
 body{
   background: #ffc600;
+  font-family: 'Amatic SC', cursive;
     
 }
 
 .header {
     text-align: center;
-    font-size: 60px;
-    font-family: Helvetica;
+    font-size: 120px;
 }
 
-.game{
-    flex-wrap: wrap;
-    width: 900px;
-    height: 600px;
-    position: absolute;
+.score {
+    background: orange;
+}
+.startGame{
+    font-weight: bold;
 }
 
 .hole{
-    margin: 100px 20px 0 50px;
+    margin: 0 20px 0 50px;
     background: url(dirt.svg) center no-repeat;
     background-size: contain;
     width: 200px;
-    height: 300px;
+    height: 100px;
     position: relative;
-    z-index: 100;
-    
+    z-index: 5;
+}
+
+.row{
+    margin-top: 200px;
 }
 
 .mole{
-    margin: 100px 20px 0 50px;    
+    margin: 200px 20px 0 50px;    
     background: url(mole.svg) center no-repeat;
     background-size: 60%;
     width: 200px;
-    height:180px;
+    height: 0px;
     position: absolute;
-    bottom: 30%;
+    bottom: 20%;
+    z-index: 4;
+    
     -webkit-transition: all 0.3s;
        -moz-transition: all 0.3s;
         -ms-transition: all 0.3s;
